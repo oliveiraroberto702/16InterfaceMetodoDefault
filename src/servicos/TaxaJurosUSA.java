@@ -1,10 +1,10 @@
 package servicos;
 
-public class TaxaJurosBrasil implements TaxaJuros {
+public class TaxaJurosUSA implements TaxaJuros {
+
 	private double taxaJuros;
-	
-	
-	public TaxaJurosBrasil(double taxaJuros) {
+
+	public TaxaJurosUSA (double taxaJuros) {
 		this.taxaJuros = taxaJuros;
 	}
 	@Override

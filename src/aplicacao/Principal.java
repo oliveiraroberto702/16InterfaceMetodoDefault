@@ -3,6 +3,7 @@ package aplicacao;
 import java.util.Locale;
 import java.util.Scanner;
 
+import servicos.TaxaJuros;
 import servicos.TaxaJurosBrasil;
 
 public class Principal {
@@ -17,8 +18,10 @@ public class Principal {
 		System.out.print("Meses: ");
 		int meses_sc = sc.nextInt();
 		
-		TaxaJurosBrasil tjb = new TaxaJurosBrasil(0.02);
-		double pagamento = tjb.pagamento(quantia_sc, meses_sc);
+		//TaxaJurosBrasil tj = new TaxaJurosBrasil(2.0);
+		//TaxaJurosUSA tj = new TaxaJurosUSA(1.0);
+		TaxaJuros tj = new TaxaJurosBrasil(2.0);
+		double pagamento = tj.pagamento(quantia_sc, meses_sc);
 		System.out.println("Pagamento após " + meses_sc + " meses:");
 		System.out.printf("%.2f%n", pagamento);
 		
